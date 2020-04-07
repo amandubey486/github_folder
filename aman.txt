@@ -1,1 +1,18 @@
-aman...
+
+m=int(input())
+a=input().split()
+n=int(input())
+b=input().split()
+set_a=set()
+set_b=set()
+if len(a)==m and len(b)==n:
+    new_a=list(map(int,a))
+    new_b=list(map(int,b))
+    set_a.update(new_a)
+    set_b.update(new_b)
+    c=set_a.difference(set_b)
+    d=set_b.difference(set_a)
+    e=c.union(d)
+    f=sorted(list(e))
+    for i in f:
+        print(i)
